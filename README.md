@@ -141,6 +141,18 @@ This Sample Application uses EnableX iOS UIKit to communicate with EnableX Serve
 
 ![multiple3](./multiple3.png)
 
+![Chat](./Chat.png)
+
+```
+    Chat page
+```
+
+![participant_list](./participant_list.png)
+
+```
+    lis of avaliable Participants in session
+```
+
 
 # Here to beautify & customized the UI as follow
     
