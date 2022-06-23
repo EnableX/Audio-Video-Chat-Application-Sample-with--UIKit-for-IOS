@@ -53,7 +53,7 @@ You would need API Credentials to access EnableX platform. To do that, simply cr
 
 #### 1.1.3 Sample iOS Client 
 
-* Clone or download this Repository : https://github.com/EnableX/Multiparty-Video-Chat-Application-Sample-for-IOS.git 
+* Clone or download this Repository : https://github.com/EnableX/Audio-Video-Chat-Application-Sample-with--UIKit-for-IOS.git 
 
 #### 1.1.4 Application Server
 
