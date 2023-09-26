@@ -6,6 +6,6 @@ framework module Enx_UIKit_iOS {
 }
 
 module Enx_UIKit_iOS.Swift {
-    header "Enx_UIKit_iOS-Swift.h"
-    requires objc
+  header "Enx_UIKit_iOS-Swift.h"
+  requires objc
 }

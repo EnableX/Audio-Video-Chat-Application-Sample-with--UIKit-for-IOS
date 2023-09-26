@@ -31,7 +31,7 @@ class VCXConfrenceRoomViewController: UIViewController  {
             DispatchQueue.main.async {
               //  Success Response from server
                 if let token = tokenInfo.token {
-                    self.videoView = EnxVideoViewClass(token: token, delegate: self)
+                    self.videoView = EnxVideoViewClass(token: token, delegate: self, embedUrl: nil)
                     self.view.addSubview(self.videoView)
                     self.videoView.frame = self.view.bounds
                     self.videoView.autoresizingMask = [.flexibleHeight,.flexibleWidth]

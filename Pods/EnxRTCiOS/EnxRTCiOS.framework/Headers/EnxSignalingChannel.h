@@ -1085,8 +1085,6 @@ Event fired when a StreamId previously subscribed has been failed to unsubscribe
 - (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didSwitchedRoom:(NSArray *_Nonnull)data;
 
 #pragma mark - Live Recording Notification
-
-
 /**
  Event fired for Strat Live Recording in room  Acknowledgment
  @param channel EnxSignalingChannel _Nullable the channel that emit the message.
@@ -1118,6 +1116,163 @@ Event fired when a StreamId previously subscribed has been failed to unsubscribe
  @details this is the socket on listrener method for the user who has joined after live Recording has started
  */
 - (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didRoomliverecordOn:(NSArray *_Nonnull)data;
+
+/**
+ Event fired for layout update in room  Acknowledgment
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data details about method process ack
+ @details this is the socket emit acknowledgment method for the event owner
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKUpdateLayout:(NSArray *_Nonnull)data;
+
+/**
+ Event fired for layout update in room for all participant
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data update about what layout moderator demanding for users
+ @details this is the socket on  method for all the users in room
+ */
+
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didLayoutupdated:(NSArray *_Nonnull)data;
+#pragma mark - Customer Data Update
+/**
+ Event fired forcustome Data Update
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data update custome data
+ @details this is the socket on  method for the owner of event
+ */
+
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didCustomDataUpdated:(NSArray *_Nonnull)data;
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKCustomDataUpdated:(NSArray *_Nonnull)data;
+/**
+ Event fired for custome Data save
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data save custome data
+ @details this is the socket on  method to the owner of event
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didCustomDataSaved:(NSArray *_Nonnull)data;
+/**
+ Event fired for get custome Data save
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket on  method to the owner of event
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didGetCustomData:(NSArray *_Nonnull)data;
+
+#pragma mark - Page Video
+/**
+ Event fired for get ACK to subscribe page video
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket ACK event method for subscribe page talker , this is only for owner of the method
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKSubscribePageVideo:(NSArray *_Nonnull)data;
+/**
+ Event fired for unsubscribe page video
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket ACK method for unsubscribe page video
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKUnsubscribePageVideo:(NSArray *_Nonnull)data;
+
+/**
+ Event fired for get page video
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket ACK method for get page video
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKGetPageVideo:(NSArray *_Nonnull)data;
+/**
+ Event on method for get page
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket on method for page talker
+ */
+-(void)signalingChannel:(EnxSignalingChannel *_Nullable)channel pageTalkerList:(NSArray *_Nonnull)data;
+#pragma mark - Speach to Text
+/**
+ Event on ACK method for StartLiveTranscription
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket ACK on method for the owner of the event
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKStartLiveTranscription:(NSArray *_Nonnull)data;
+
+/**
+ Event on ACK method for SubscribeForLiveTranscription
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket ACK on method for the owner of the event
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKSubscribeForLiveTranscription:(NSArray *_Nonnull)data;
+
+/**
+ Event on ACK method for StopLiveTranscription
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket ACK on method for the owner of the event
+ */
+
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didACKStopLiveTranscription:(NSArray *_Nonnull)data;
+
+/**
+ Event on notification for the user how start StartLiveTranscription
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket on method for StartLiveTranscription
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didTranscriptionEvents:(NSArray *_Nonnull)data;
+
+
+/**
+ Event on notification all the user.
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details When the room transcription on, the following event is being sent to all the participant details.
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didRomTranscriptionOn:(NSArray *_Nonnull)data;
+
+/**
+ Event Off notification all the user
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details Once the transcription is off, the following events will be sent.
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didRoomTranscriptionOff:(NSArray *_Nonnull)data;
+
+/**
+ Event on notification for the user how start StartLiveTranscription
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details For a client level transcription, once it is started, the following event is sent.
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didSelfTranscriptionOn:(NSArray *_Nonnull)data;
+
+/**
+ Event Off notification for the user how Stop StartLiveTranscription
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details For the client level transcription, the following event is sent once the transcription is turned off.
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didSelfTranscriptionOff:(NSArray *_Nonnull)data;
+
+
+/**
+ Event to notification for the audiance  once HLS- Started
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket Notiufication method for all audiances , once HLS stream has been stared
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didHLSStreamingNotification:(NSArray *_Nonnull)data;
+/**
+ Event to notification for the audiance  once HLS- Stopped
+ @param channel EnxSignalingChannel _Nullable the channel that emit the message.
+ @param data related to customer
+ @details this is the socket Notiufication method for all audiances , once HLS stream has been Stopped
+ */
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didHLSStreamingNotificationToPublisher:(NSArray *_Nonnull)data;
+
+#pragma mark- auxilaryPublishRequests
+- (void)signalingChannel:(EnxSignalingChannel *_Nullable)channel didauxilaryPublishResponse:(NSArray *_Nonnull)data;
 
 @end
 
@@ -1640,5 +1795,30 @@ signalingChannelDelegate:(id<EnxSignalingChannelDelegate>_Nullable)delegate;
 
 -(void)startLiveRecording:(NSDictionary *_Nonnull)streamingConfig;
 -(void)stopLiveRecording;
+
+#pragma mark - LoyouUpdate
+//Update Loyout for liveRecording’, ‘streaming’, ‘screenShare’,’all’
+-(void)updateLayout:(NSDictionary* _Nonnull)layoutOptions;
+
+#pragma mark - Customer Data Update
+//Save Data
+-(void)saveCustomData:(NSDictionary* _Nonnull)CustomData;
+//update Data
+-(void)setCustomData:(NSDictionary* _Nonnull)CustomData;
+//get Data
+-(void)getCustomData:(NSDictionary* _Nonnull)CustomData;
+
+
+#pragma mark - Page Video
+-(void)pageTalket:(NSDictionary* _Nonnull)info;
+
+#pragma mark - Speach to Text
+-(void)startLiveTranscription:(NSDictionary *_Nullable)options;
+-(void)stopLiveTranscription;
+
+#pragma mark- auxilaryPublishRequests
+
+-(void)auxilaryPublishRequests:(NSDictionary *_Nullable)options;
+
 
 @end

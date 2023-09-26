@@ -292,6 +292,26 @@
 #define kRoomMuted                                  @"roommuted"
 #define kRoomUnMuteInProgress                       @"roomUnMuteInProgress"
 
+
+/* Subscribe Unsubscribe Page Video*/
+    #define kSubscribePageVideo                      @"subscribePageVideo"
+    #define kSubscribePageVideoInProgress            @"SubscribePageVideoInProgress"
+    #define kSubscribedPageVideo                     @"SubscribedPageVideo "
+    #define kUnSubscribePageVideoProgress            @"UnSubscribePageVideoProgress"
+
+/* PSTN call*/
+
+    #define kCallStarted                        @"callStarted"
+    #define kCallInProgress                     @"CallInProgress"
+    #define kCancelCallInProgress               @"CancelCallInProgress"
+    
+/*Speach to Text **/
+
+#define kStartLiveTranscription                      @"startLiveTranscription"
+#define kStartLiveTranscriptionInProgress            @"startLiveTranscriptionInProgress"
+#define kStartedLiveTranscription                     @"startedLiveTranscription "
+#define kStopLiveTranscriptionInProgress                  @"stopLiveTranscriptionInProgress"
+
 #endif /* EnxContants_h */
 
 
