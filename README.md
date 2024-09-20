@@ -29,7 +29,7 @@ You will also enjoy the following features:
 * Allow/deny Participant’s Raised Hand Request (only for webinar mode)
 * Revoke Allowed Raised Hand Request (only for webinar mode)
 
-> For more information, pls visit our Developer Center https://www.enablex.io/developer/video/solutions/video-ui-kit/ios-video-ui-kit/
+> For more information, pls visit our Developer Center https://developer.enablex.io/docs/guides/ui-kit-guide/ios-ui-kit-guide/index/
 
 ## 1. Get started
 
@@ -65,7 +65,7 @@ An Application Server is required for your iOS App to communicate with EnableX. 
 Note the following:
 •	You need to use App ID and App Key to run this Service.
 •	Your iOS Client EndPoint needs to connect to this Service to create Virtual Room and Create Token to join the session.
-•	Application Server is created using [EnableX Server API](https://www.enablex.io/developer/video-api/server-api) while Rest API Service helps in provisioning, session access and post-session reporting.
+•	Application Server is created using [EnableX Server API](https://developer.enablex.io/docs/references/apis/video-api/index/) while Rest API Service helps in provisioning, session access and post-session reporting.
 
 If you would like to test the quality of EnableX video call before setting up your own application server,  you can run the test on our pre-configured environment. Refer to point 2 for more details on this.
 
@@ -183,8 +183,8 @@ EnxSetting.shared.updateTopOptionView(withColor: UIColor)
 EnxSetting.shared.configureTopOptionList(withList: [button-list]) 
 ```
 # For more check this below document
-* Documentation: https://www.enablex.io/developer/video/solutions/video-ui-kit/ios-video-ui-kit/
-* Download: https://www.enablex.io/developer/video/solutions/video-ui-kit/ios-video-ui-kit/
+* Documentation: https://developer.enablex.io/docs/guides/ui-kit-guide/ios-ui-kit-guide/index/
+* Download: https://developer.enablex.io/docs/guides/ui-kit-guide/ios-ui-kit-guide/index/
 
 
 ## 4. Support
