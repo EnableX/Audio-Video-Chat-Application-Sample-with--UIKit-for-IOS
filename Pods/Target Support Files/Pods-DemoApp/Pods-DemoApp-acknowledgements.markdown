@@ -1,18 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## EnablexWebRTC
-
-https://www.enablex.io/legals/tou/
-
-## EnxRTCiOS
-
-https://www.enablex.io/legals/tou/
-
-## Enx_UIKit_iOS
-
-https://www.enablex.io/legals/tou/
-
 ## ReachabilitySwift
 
 Copyright (c) 2016 Ashley Mills
@@ -276,7 +264,7 @@ Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
-   Copyright (c) 2014-2016 Dalton Cherry.
+   Copyright (c) 2014-2023 Dalton Cherry.
 
    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 

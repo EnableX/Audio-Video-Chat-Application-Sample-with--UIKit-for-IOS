@@ -61,7 +61,12 @@ class VCXConfrenceRoomViewController: UIViewController  {
     }
 }
 extension VCXConfrenceRoomViewController : EnxVideoStateDelegate{
+    func connect(toRoom enxRoom: EnxRoom?, roomMetadata: [String : Any]?) {
+        //To Do
+    }
     
+    
+
     func disconnect(response: [Any]?) {
         self.navigationController?.popViewController(animated: true)
     }
